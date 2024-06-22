@@ -1,6 +1,14 @@
-import { Text, View, ScrollView } from "react-native";
-import { Card } from "react-native-elements";
+import { Text, View, ScrollView, StyleSheet } from "react-native";
+
+//screens
+import Login from "../screens/Login";
+import Signup from "../screens/Signup";
 
 export default function Index() {
-  return <ScrollView></ScrollView>;
+  return (
+    //  import login screen here
+    <ScrollView>
+      <Login />
+    </ScrollView>
+  );
 }
