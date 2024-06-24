@@ -21,7 +21,7 @@ import {
     Colors
 } from '../components/styles'
 import { StatusBar } from "expo-status-bar";
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 //formik
 import { Formik } from 'formik'
 //icons
@@ -35,6 +35,7 @@ const Login = () => {
     const [hidePassword, setHidePassword] = useState(false)
 
     const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props }) => {
+
         return (
             <View>
                 <LeftIcon>

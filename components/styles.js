@@ -40,7 +40,7 @@ export const PageTitle = Styled.Text`
     text-align: center;
     font-weight: bold;
     color: ${brand};
-    padding-top: 10px;
+    padding-top: 10px; 
     `
 
 export const SubTitle = Styled.Text`
@@ -49,6 +49,7 @@ export const SubTitle = Styled.Text`
     letter-spacing: 1px;
     font-weight: bold;
     color: ${tertiary};
+    
 `
 export const StyledFormArea = Styled.View`
     width: 90%;
@@ -110,7 +111,7 @@ export const ButtonText = Styled.Text`
     text-align: center;
     
     ${(props) => props.google && `
-     padding-left: 25px;
+    padding-left: 25px;
 `}
 `
 
@@ -154,4 +155,27 @@ export const TextLinkContent = Styled.Text`
     color: ${brand};
     font-size: 15px;
     margin-horizontal: 5px;
+`
+
+export const UserDisplayContainer = Styled(InnerContainer)`
+    border-radius: 0.25rem;
+    background-color: ${brand};
+    justify-content: center;
+    padding-vertical: 1.5rem;
+    color: ${primary};
+`
+
+export const UserAvatar = Styled.Image`
+    position: relative;
+    top: -5rem;
+    margin: auto;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+`
+
+export const UserName = Styled.Text`
+    font-size: 1.5rem;
+    font-weight: bold;
 `
