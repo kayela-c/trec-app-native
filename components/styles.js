@@ -1,4 +1,5 @@
 import Styled from 'styled-components/native';
+import styled from 'styled-components/native';
 import { View, Text, Image, TextInput } from 'react-native';
 import Constants from 'expo-constants';
 
@@ -29,6 +30,28 @@ export const InnerContainer = Styled.View`
     width: 100%;
     align-items: center;
 `
+export const UserDisplayContainer = styled(InnerContainer)`
+    border-radius: 5px;
+    background-color: ${brand};
+    justify-content: center;
+    padding-vertical: 1.5rem;
+    color: ${primary};
+`
+
+export const UserAvatar = Styled.Image`
+    position: relative;
+    top: -5rem;
+    margin: auto;
+    border-radius: 250px;
+    width: 100px;
+    height: 100px;
+
+`
+
+export const UserName = Styled.Text`
+    font-size: 1.5rem;
+    font-weight: bold;
+    `
 
 export const PageLogo = Styled.Image`
     width: 250px;
@@ -41,6 +64,10 @@ export const PageTitle = Styled.Text`
     font-weight: bold;
     color: ${brand};
     padding-top: 10px; 
+
+    ${(props) => props.dashboard && `
+    color: ${primary};
+    `}
     `
 
 export const SubTitle = Styled.Text`
@@ -49,7 +76,13 @@ export const SubTitle = Styled.Text`
     letter-spacing: 1px;
     font-weight: bold;
     color: ${tertiary};
-    
+    ${(props) => props.dashboard && `
+    color: ${primary};
+    `}
+`
+export const InfoText = Styled.Text`
+    color: ${primary};
+    padding-horizontal: 20px;
 `
 export const StyledFormArea = Styled.View`
     width: 90%;
@@ -95,14 +128,24 @@ export const StyledButton = Styled.TouchableOpacity`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    margin-vertical: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     height: 60px;
+
 ${(props) => props.google && `
     background-color: ${green};
     flex-direction: row;
     justify-content: center;
 `}
 
+${(props) => props.green && `
+    background-color: ${green};
+    justify-content: center;
+`}
+${(props) => props.red && `
+    background-color: ${red};
+    justify-content: center;
+`}
 `
 
 export const ButtonText = Styled.Text`
@@ -157,25 +200,3 @@ export const TextLinkContent = Styled.Text`
     margin-horizontal: 5px;
 `
 
-export const UserDisplayContainer = Styled(InnerContainer)`
-    border-radius: 5px;
-    background-color: ${brand};
-    justify-content: center;
-    padding-vertical: 1.5rem;
-    color: ${primary};
-`
-
-export const UserAvatar = Styled.Image`
-    position: relative;
-    top: -5rem;
-    margin: auto;
-    border-radius: 250px;
-    width: 100px;
-    height: 100px;
-
-`
-
-export const UserName = Styled.Text`
-    font-size: 1.5rem;
-    font-weight: bold;
-`
