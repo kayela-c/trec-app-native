@@ -158,7 +158,7 @@ export const TextLinkContent = Styled.Text`
 `
 
 export const UserDisplayContainer = Styled(InnerContainer)`
-    border-radius: 0.25rem;
+    border-radius: 5px;
     background-color: ${brand};
     justify-content: center;
     padding-vertical: 1.5rem;
@@ -169,7 +169,7 @@ export const UserAvatar = Styled.Image`
     position: relative;
     top: -5rem;
     margin: auto;
-    border-radius: 50%;
+    border-radius: 250px;
     width: 100px;
     height: 100px;
 
