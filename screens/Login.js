@@ -27,12 +27,13 @@ import { Formik } from 'formik'
 //icons
 import { Ionicons, Octicons, Fontisto } from '@expo/vector-icons';
 
-
 const { brand, primary, secondary } = Colors;
-
 
 const Login = () => {
     const [hidePassword, setHidePassword] = useState(false)
+    const [] = useState(false)
+
+
 
     const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props }) => {
 
@@ -72,6 +73,10 @@ const Login = () => {
                     initialValues={{ email: '', password: '' }}
                     onSubmit={(values) => {
                         console.log(values)
+                        if (email && password) {
+                            //redirect to dashboard screen
+                            navigation.navigate('Dashboard')
+                        }
                     }}
                 >
                     {({ handleChange, handleBlur, handleSubmit, values }) => (
@@ -118,7 +123,6 @@ const Login = () => {
                     style={{
                         marginBottom: 10,
                     }}>
-
                     <Text>Use of this system constitutes consent to monitoring, interception, recording, reading, copying or capturing by authorized personnel of all activities. There is no right to privacy in this system. Unauthorized use of this system is prohibited and subject to criminal and civil penalties.</Text>
                 </View>
             </InnerContainer>
