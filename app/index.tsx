@@ -9,7 +9,7 @@ export default function Index() {
   return (
     //  import login screen here
     <ScrollView>
-      <Dashboard />
+      <Login />
     </ScrollView>
   );
 }
